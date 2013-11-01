@@ -6,14 +6,14 @@
 <!--[if gt IE 9]><!--><html lang="<%= I18n.locale %>"><!--<![endif]-->
   <head data-hook="inside_head">
     <%= render :partial => 'spree/shared/head' %>
-
     <script type="text/javascript">
       var _trustvox = _trustvox || [];
       _trustvox.push(['_storeId', '1']);
+      _trustvox.push(['_productId', '<%= @product.try(:permalink) %>']);
 
       (function() {
         var tv = document.createElement('script'); tv.type = 'text/javascript'; tv.async = true;
-        tv.src = ('https:' == document.location.protocol ? 'https://' : 'http://') + '<%= Store::Application.config.widget_host %>/assets/publisher/trustvox_widget.js';
+        tv.src = '//<%= Store::Application.config.widget_host %>/assets/publisher/trustvox_widget.js';
         var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(tv, s);
       })();
     </script>
