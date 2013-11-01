@@ -65,5 +65,5 @@ Store::Application.configure do
   # with SQLite, MySQL, and PostgreSQL)
   # config.active_record.auto_explain_threshold_in_seconds = 0.5
 
-  config.widget_host = "http://54.215.17.234:8080"
+  config.widget_host = "trustvox-production-assets.s3.amazonaws.com"
 end
