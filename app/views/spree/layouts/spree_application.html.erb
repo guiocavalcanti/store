@@ -13,7 +13,7 @@
 
       (function() {
         var tv = document.createElement('script'); tv.type = 'text/javascript'; tv.async = true;
-        tv.src = '//<%= Store::Application.config.widget_host %>/assets/publisher/trustvox_widget.js';
+        tv.src = '//<%= Store::Application.config.widget_host %>/assets/publisher/trustvox-0.0.1.min.js';
         var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(tv, s);
       })();
     </script>
