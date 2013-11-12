@@ -34,4 +34,9 @@ Store::Application.configure do
 
   # Expands the lines which load the assets
   config.assets.debug = true
+
+  config.host = 'http://0.0.0.0:3001'
+  # Enable serving of images, stylesheets, and JavaScripts from an asset server
+  config.action_mailer.asset_host = config.host
+  config.action_controller.asset_host = config.host
 end

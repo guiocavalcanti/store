@@ -1,3 +1,19 @@
+<% content_for(:trustvox_widget) do %>
+  <script type="text/javascript">
+    var _trustvox = _trustvox || [];
+    _trustvox.push(['_storeId', '1']);
+    _trustvox.push(['_productId', '<%= @product.id %>']);
+    _trustvox.push(['_productName', '<%= @product.name %>']);
+    _trustvox.push(['_productPhotos', <%= product_images_urls(@product).html_safe %>]);
+
+    (function() {
+      var tv = document.createElement('script'); tv.type = 'text/javascript'; tv.async = true;
+      tv.src = '//<%= Store::Application.config.widget_host %><%= Store::Application.config.widget_file %>';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(tv, s);
+    })();
+  </script>
+<% end %>
+
 <div data-hook="product_show" itemscope itemtype="http://schema.org/Product">
   <% @body_id = 'product-details' %>
 
