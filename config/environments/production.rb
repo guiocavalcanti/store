@@ -66,5 +66,5 @@ Store::Application.configure do
   # config.active_record.auto_explain_threshold_in_seconds = 0.5
 
   config.widget_host = "trustvox-production-assets.s3.amazonaws.com"
-  config.widget_file = "/assets/trustvox-0.0.1.min.js"
+  config.widget_file = "/assets/trustvox.1.min.js"
 end
